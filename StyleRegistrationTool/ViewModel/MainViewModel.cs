@@ -582,7 +582,7 @@ namespace StyleRegistrationTool.ViewModel
         async Task<VoicevoxStyle[]> GetVoicevoxStyles()
         {
             List<VoicevoxStyle> voicevoxStyles = new List<VoicevoxStyle>();
-            using (var resultSpeakers = await httpClient.GetAsync($"http://127.0.0.1:{Port}/speakers"))
+            using (var resultSpeakers = await httpClient.GetAsync($"http://192.168.0.58:{Port}/speakers"))
             {
                 //戻り値を文字列にする
                 string resBodyStr = await resultSpeakers.Content.ReadAsStringAsync();
