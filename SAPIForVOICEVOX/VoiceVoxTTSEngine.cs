@@ -609,7 +609,7 @@ namespace SAPIForVOICEVOX
             Process[] ps = Process.GetProcessesByName("run");
             if (ps.Length == 0)
             {
-                throw new VoiceVoxNotFoundException();
+                //throw new VoiceVoxNotFoundException();
             }
 
             string speakerString = speakerNum.ToString();
