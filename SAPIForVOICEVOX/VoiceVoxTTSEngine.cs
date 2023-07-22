@@ -609,7 +609,7 @@ namespace SAPIForVOICEVOX
             Process[] ps = Process.GetProcessesByName("run");
             if (ps.Length == 0)
             {
-                throw new VoiceVoxNotFoundException();
+                //throw new VoiceVoxNotFoundException();
             }
 
             string speakerString = speakerNum.ToString();
@@ -626,7 +626,7 @@ namespace SAPIForVOICEVOX
             try
             {
                 //audio_queryを送る
-                string url = $"http://127.0.0.1:{Port}/";
+                string url = $"http://192.168.0.58:{Port}/";
                 using (var resultAudioQuery = await httpClient.PostAsync($"{url}audio_query?{encodedParamaters}", null))
                 {
                     //戻り値を文字列にする
